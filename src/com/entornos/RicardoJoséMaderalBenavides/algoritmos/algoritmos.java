@@ -26,7 +26,7 @@ public abstract class algoritmos {
             fiboo = fibooo;
         }
         return fibo; }
-    
+ 
     
     
     
