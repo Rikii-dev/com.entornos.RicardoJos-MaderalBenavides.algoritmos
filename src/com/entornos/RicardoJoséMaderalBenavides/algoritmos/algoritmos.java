@@ -13,19 +13,21 @@ public abstract class algoritmos {
      * @return el número de Fibonacci en la posición especificada.
      * @throws IllegalArgumentException si el número es negativo.
      */
-    public int fibonacci(int num) {
-        if (num < 0)
-            throw new IllegalArgumentException("La posición debe ser mayor o igual a 0.");
-        if (num == 0) return 0;
-        if (num == 1) return 1;
+	public int fibonacci(int num) {
+	    if (num < 0)
+	        throw new IllegalArgumentException("La posición debe ser mayor o igual a 0.");
+	    if (num == 0) return 0;
+	    if (num == 1) return 1;
 
-        int fibo = 0, fiboo = 1;
-        for (int i = 2; i <= num; i++) {
-            int fibooo = fibo + fiboo;
-            fibo = fiboo;
-            fiboo = fibooo;
-        }
-        return fibo; }
+	    int fibo = 0, fiboo = 1;
+	    for (int i = 2; i <= num; i++) {
+	        int fibooo = fibo + fiboo;
+	        fibo = fiboo;
+	        fiboo = fibooo;
+	    }
+	    return fiboo;
+	}
+
  
     
     /**
