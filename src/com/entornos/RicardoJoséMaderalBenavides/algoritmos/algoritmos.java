@@ -44,7 +44,30 @@ public abstract class algoritmos {
         }
         return result;
     }
-   
+
+    /**
+     * Determina si un número entero es primo.
+     * 
+     * @param num número entero a evaluar. Debe ser mayor o igual a 2.
+     * @return {@code true} si el número es primo, {@code false} en caso contrario.
+     * @throws IllegalArgumentException si el número es menor que 2.
+     */
+    public boolean primo(int num){
+        if (num < 2)
+            throw new IllegalArgumentException("El número debe ser mayor o igual a 2.");
+        if (num == 2) return true;
+        if (num % 2 == 0) return false;
+        for (int i = 3; i * i <= num; i += 2) {
+            if (num % i == 0)
+                return false;
+        }
+        return true;
+    
+
+    
+    }
+    
+    
    
 }
 
