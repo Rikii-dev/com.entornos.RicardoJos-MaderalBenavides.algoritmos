@@ -28,8 +28,23 @@ public abstract class algoritmos {
         return fibo; }
  
     
-    
-    
+    /**
+     * Calcula el factorial de un número entero.
+     * 
+     * @param num número entero del que se desea calcular el factorial. Debe ser mayor o igual a 0.
+     * @return el resultado del factorial del número indicado.
+     * @throws IllegalArgumentException si el número es negativo.
+     */
+    public int factorial(int num) {
+        if (num < 0)
+            throw new IllegalArgumentException("El número debe ser mayor o igual a 0.");
+        int result = 1;
+        for (int i = 1; i <= num; i++) {
+            result *= i;
+        }
+        return result;
+    }
+   
    
 }
 
